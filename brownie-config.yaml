@@ -1,0 +1,26 @@
+dependencies:
+  - aave/protocol-v2@1.0.1
+  - smartcontractkit/chainlink-brownie-contracts@1.1.1
+  - OpenZeppelin/openzeppelin-contracts@3.4.0
+compiler:
+  solc:
+    remappings:
+      - '@aave=aave/protocol-v2@1.0.1'
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@1.1.1'
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@3.4.0'
+networks:
+  kovan:
+    weth_token: '0xd0A1E359811322d97991E03f863a0C30C2cF029C'
+    lending_pool_addresses_provider: '0x88757f2f99175387ab4c6a4b3067c77a695b0349'
+    dai_eth_price_feed: '0x22B58f1EbEDfCA50feF632bD73368b2FdA96D541'
+    dai_token: '0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa'
+  mainnet-fork-dev:
+    weth_token: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+    lending_pool_addresses_provider: '0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5'
+    dai_eth_price_feed: '0x773616e4d11a78f511299002da57a0a94577f1f4'
+    dai_token: '0x6B175474E89094C44Da98b954EedeAC495271d0F'
+wallets:
+  from_key: ${PRIVATE_KEY}
+settings:
+  gas_limit: "2074044"
+dotenv: .env
